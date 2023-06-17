@@ -121,8 +121,8 @@ namespace Seneca
                     email = Email,
                     passWord = PassWord
                 };
-
-                Credentials["Email"] = user;
+                int id = Credentials.Count();
+                Credentials.Add($"Email {id}", user);
 
                 return true; 
             }

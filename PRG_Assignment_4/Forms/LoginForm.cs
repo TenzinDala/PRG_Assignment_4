@@ -39,13 +39,14 @@ namespace PRG_Assignment_4.Forms
                     User.loggedInUser = user;
 
                     UserInfoForm userInfoForm = new UserInfoForm();
-                    userInfoForm.Show();
+                    userInfoForm.ShowDialog();
+                    continue;
                 }
-                else
-                {
-                    MessageBox.Show("Login Failed!!!");
-                    User.loggedInStatus = false;
-                }
+              
+            }
+            if(!User.loggedInStatus)
+            {
+                MessageBox.Show("Login Failed!!!");
             }
         }
     }
