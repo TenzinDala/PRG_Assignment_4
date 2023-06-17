@@ -62,6 +62,7 @@
             // 
             // textBox1
             // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(333, 69);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
@@ -70,6 +71,7 @@
             // 
             // textBox2
             // 
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.Location = new System.Drawing.Point(333, 132);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
@@ -89,6 +91,7 @@
             // 
             // textBox3
             // 
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox3.Location = new System.Drawing.Point(333, 198);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
@@ -108,6 +111,7 @@
             // 
             // textBox4
             // 
+            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox4.Location = new System.Drawing.Point(333, 263);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
@@ -128,6 +132,7 @@
             // register
             // 
             this.register.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.register.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.register.Location = new System.Drawing.Point(274, 342);
             this.register.Name = "register";
             this.register.Size = new System.Drawing.Size(157, 54);

@@ -5,7 +5,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -20,14 +22,14 @@ namespace PRG_Assignment_4
             LoginForm loginForm = new LoginForm();
             loginForm.Show();
             loginForm.MdiParent = this;
-            
+
         }
 
         private void registerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             RegistrationForm registrationForm = new RegistrationForm();
-            registrationForm.ShowDialog();
-            registrationForm.MdiParent = this;
+            registrationForm.ShowDialog(); //For Modal
+            //registrationForm.MdiParent = this;
         }
 
         private void userInfoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -73,10 +75,27 @@ namespace PRG_Assignment_4
             }
             else
             {
-                User.loggedInUser = null;
+                //User.loggedInUser = null;
                 User.loggedInStatus = false;
                 MessageBox.Show("Successfully Logged out!!!");
             }
+        }
+
+        private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            MessageBox.Show("Form is now closing");
+            FileManager.WriteFile();
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            List<string> strings = new List<string>();
+            string path = Directory.GetCurrentDirectory();
+            string filePath = System.IO.Path.Combine(path, "User_Informations.txt");
+
+            strings = FileManager.ReadFile(filePath);
+            int id = User.Credentials.Count();
+            //User.Credentials.Add($"Email {id}", user);
         }
     }
 }
