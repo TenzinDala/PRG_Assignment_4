@@ -11,30 +11,81 @@ namespace Seneca
 {
     public static class FileManager
     {
-        public static List<string> ReadFile(string filePath)
+        //public static List<string> ReadFile(string filePath)
+        //{
+        //    List<string> lines = new List<string>();
+        //    //string[] lines
+        //    List<string> finalLines = new List<string>();
+
+        //    using (StreamReader reader = new StreamReader(filePath))
+        //    {
+        //        string Line;
+
+        //        while ((Line = reader.ReadLine()) != null)
+        //        {
+        //            //lines = Line;
+        //            lines.Add(Line);
+        //            if (Line == "")
+        //            {
+        //                finalLines.AddRange(lines);
+        //                lines.Clear();
+        //            }
+        //            //Console.WriteLine(columns[1]);
+        //            // Access the ISBN value (first column)
+        //        }
+        //    }
+        //    return finalLines;
+        ////}
+
+        public static void ReadFile(string filePath)
         {
             List<string> lines = new List<string>();
-            //string[] lines
-            List<string> finalLines = new List<string>();
-
             using (StreamReader reader = new StreamReader(filePath))
             {
-                string Line;
-
-                while ((Line = reader.ReadLine()) != null)
+                string line;
+                while ((line = reader.ReadLine()) != null)
                 {
-                    //lines = Line;
-                    lines.Add(Line);
-                    if (Line == "")
+                    if (line.Trim() == "")
                     {
-                        finalLines.AddRange(lines);
+                        // Process the lines and create a new User object
+                        if (lines.Count >= 4)
+                        {
+                            string name = lines[0];
+                            string lastName = lines[1];
+                            string username = lines[2];
+                            string password = lines[3];
+
+                            User user = new User()
+                            {
+                                //firstName = "Preeti",
+                                //lastName = "Gurung",
+                                //email = "Mr.Handsome",
+                                //passWord = "12345678"
+                            };
+
+                            user.CreateUser(name, lastName, username, password);
+                        }
+
                         lines.Clear();
                     }
-                    //Console.WriteLine(columns[1]);
-                    // Access the ISBN value (first column)
+                    else
+                    {
+                        lines.Add(line);
+                    }
                 }
+
+                // Process the remaining lines if any
+                //if (lines.Count >= 4)
+                //{
+                //    string name = lines[0];
+                //    string lastName = lines[1];
+                //    string username = lines[2];
+                //    string password = lines[3];
+
+                //    User user = new User(name, lastName, username, password);
+                //    Credentials[username] = user;
+                //}
             }
-            return finalLines;
         }
 
 
