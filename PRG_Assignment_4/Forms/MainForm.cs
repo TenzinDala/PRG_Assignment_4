@@ -41,7 +41,7 @@ namespace PRG_Assignment_4
             else
             {
                 UserInfoForm userInfoForm = new UserInfoForm();
-                userInfoForm.Show();
+                userInfoForm.ShowDialog();
             }
         }
 
@@ -93,9 +93,15 @@ namespace PRG_Assignment_4
             string path = Directory.GetCurrentDirectory();
             string filePath = System.IO.Path.Combine(path, "User_Informations.txt");
 
-            strings = FileManager.ReadFile(filePath);
-            int id = User.Credentials.Count();
+            FileManager.ReadFile(filePath);
+            //int id = User.Credentials.Count();
             //User.Credentials.Add($"Email {id}", user);
+        }
+
+        private void loginToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LoginForm loginForm2 = new LoginForm();
+            loginForm2.ShowDialog();
         }
     }
 }
