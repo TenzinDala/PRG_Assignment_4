@@ -28,64 +28,6 @@ namespace Seneca
             
         }
 
-        //public User CreateUser(string FirstName, string LastName, string Email, string PassWord) 
-        //{
-        //    try
-        //    {
-        //        User userNew = new User();  // Create an instance of the User class
-        //        bool firstNameCheck = nameValidation(FirstName);
-        //        if (firstNameCheck)
-        //        {
-        //            userNew.firstName = this.firstName;  // Set the properties of the user object
-
-        //        }
-        //        else
-        //        {
-        //            throw new Exception();
-        //        }
-        //        bool lastNameCheck = nameValidation(LastName);
-        //        if (lastNameCheck)
-        //        {
-        //            userNew.lastName = this.lastName;
-
-        //        }
-        //        else
-        //        {
-        //            throw new Exception();
-
-        //        }
-        //        bool emailCheck = emailValidation(Email);
-        //        if (emailCheck)
-        //        {
-        //            userNew.email = this.email;
-
-        //        }
-        //        else
-        //        {
-        //            throw new Exception();
-
-        //        }
-        //        bool passWordCheck = passwordValidation(PassWord);
-        //        if (passWordCheck)
-        //        {
-        //            userNew.passWord = this.passWord;
-
-        //        }
-        //        else
-        //        {
-        //            throw new Exception();
-
-        //        }
-
-        //        return userNew;
-        //    }
-        //    catch (Exception e)
-        //    {
-        //        Console.WriteLine(e.Message);
-        //        return null;
-        //    }
-        //}
-
         public bool CreateUser(string FirstName, string LastName, string Email, string PassWord)
         {
             try

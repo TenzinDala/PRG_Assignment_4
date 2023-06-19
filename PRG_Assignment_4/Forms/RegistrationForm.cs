@@ -43,5 +43,10 @@ namespace PRG_Assignment_4.Forms
                 }
             }
         }
+
+        private void close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

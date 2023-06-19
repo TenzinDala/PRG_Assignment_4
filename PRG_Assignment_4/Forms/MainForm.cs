@@ -75,7 +75,7 @@ namespace PRG_Assignment_4
             }
             else
             {
-                //User.loggedInUser = null;
+                User.loggedInUser = null;
                 User.loggedInStatus = false;
                 MessageBox.Show("Successfully Logged out!!!");
             }
@@ -92,10 +92,10 @@ namespace PRG_Assignment_4
             List<string> strings = new List<string>();
             string path = Directory.GetCurrentDirectory();
             string filePath = System.IO.Path.Combine(path, "User_Informations.txt");
-
-            FileManager.ReadFile(filePath);
-            //int id = User.Credentials.Count();
-            //User.Credentials.Add($"Email {id}", user);
+            if(File.Exists(filePath))
+            {
+                FileManager.ReadFile(filePath);
+            }
         }
 
         private void loginToolStripMenuItem_Click(object sender, EventArgs e)
