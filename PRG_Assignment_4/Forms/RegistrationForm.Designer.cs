@@ -38,6 +38,7 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.passWord = new System.Windows.Forms.Label();
             this.register = new System.Windows.Forms.Button();
+            this.close = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -133,7 +134,7 @@
             // 
             this.register.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.register.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.register.Location = new System.Drawing.Point(274, 342);
+            this.register.Location = new System.Drawing.Point(215, 333);
             this.register.Name = "register";
             this.register.Size = new System.Drawing.Size(157, 54);
             this.register.TabIndex = 9;
@@ -141,12 +142,25 @@
             this.register.UseVisualStyleBackColor = false;
             this.register.Click += new System.EventHandler(this.register_Click);
             // 
+            // close
+            // 
+            this.close.BackColor = System.Drawing.Color.Red;
+            this.close.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.close.Location = new System.Drawing.Point(415, 336);
+            this.close.Name = "close";
+            this.close.Size = new System.Drawing.Size(153, 56);
+            this.close.TabIndex = 10;
+            this.close.Text = "Close";
+            this.close.UseVisualStyleBackColor = false;
+            this.close.Click += new System.EventHandler(this.close_Click);
+            // 
             // RegistrationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.close);
             this.Controls.Add(this.register);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.passWord);
@@ -176,5 +190,6 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label passWord;
         private System.Windows.Forms.Button register;
+        private System.Windows.Forms.Button close;
     }
 }
